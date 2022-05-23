@@ -15,13 +15,17 @@ public:
 
     trent()
     {
-        std::cout<<"Trent aproaches you slowly";
-        name = "trent";
+        std::string name = "trent";
         health = 10;
         strength = 1;
     }
-    ~trent()
+    void greetings()
+    {
+        std::cout<<"Trent aproaches you slowly";
+    };
+    void defeated()
     {
         std::cout<<"Trent has been defeated";
     }
+
 };
