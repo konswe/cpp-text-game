@@ -1,7 +1,16 @@
 #include <iostream>
+#include <vector>
+
 #include "character.h"
 #include "menu.h"
-main(){
+#include "enemies.h"
+
+main()
+{
     character champion;
-    menu();
+    while(champion.health){
+        menu();
+        std::vector<int>defeatedEnemies; //storing all defeated enemies
+        champion.health=0;
+    }
 }
