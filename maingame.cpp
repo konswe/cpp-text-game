@@ -3,5 +3,4 @@
 
 main(){
     character champion;
-    std::cout<<champion.health<<std::endl;
 }
