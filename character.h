@@ -7,8 +7,9 @@ public:
     int damage;
     int stamina;
     int knowledge;
-    character(){ //when created give him this stats
-        std::cin>>name;
+    character() //when created give him this stats
+    {  
+       std::cin>>name;
         health = 5;
         damage = 5;
         stamina = 10;
