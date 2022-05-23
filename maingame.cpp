@@ -5,6 +5,14 @@
 #include "menu.h"
 #include "enemies.h"
 
+void fight(trent* enemy)
+{
+    enemy->greetings();
+    std::cout<<"\n";
+    enemy->defeated();
+    std::cout<<"\n";
+}
+
 main()
 {
     character champion;
@@ -13,4 +21,7 @@ main()
         std::vector<int>defeatedEnemies; //storing all defeated enemies
         champion.health=0;
     }
+    trent* trent1;
+    fight(trent1);
+    
 }
