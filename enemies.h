@@ -1,31 +1,26 @@
 #include <iostream>
 
-class enemyLow
-{
-public:
-    int health;
-    int strength;
-
-};
-
-class trent : public enemyLow
+class enemyLow              //creates enemy
 {
 public:
     std::string name;
-
-    trent()
-    {
-        std::string name = "trent";
-        health = 10;
-        strength = 1;
-    }
+    int health;
+    int strength;
     void greetings()
     {
-        std::cout<<"Trent aproaches you slowly";
+        std::cout<<"X aproaches you slowly";
     };
     void defeated()
     {
-        std::cout<<"Trent has been defeated";
+        std::cout<<"X has been defeated";
+    }
+    void setHealth(int hp)
+    {
+        health = hp;
+    }
+    void setAttack(int atk)
+    {
+        strength = atk;
     }
 
 };
