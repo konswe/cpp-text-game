@@ -1,5 +1,5 @@
 #include <iostream>
-class character //vreating character with stats
+class character //creating character with stats
 {
 public:
     std::string name;
