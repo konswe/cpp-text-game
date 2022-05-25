@@ -18,7 +18,7 @@ main()
 {
     character champion;
     while(champion.health){
-        menu();
+        menu(champion);
         std::vector<int>defeatedEnemies; //storing all defeated enemies
         champion.health=0;
     }
