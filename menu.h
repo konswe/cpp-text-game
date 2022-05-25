@@ -1,7 +1,7 @@
 #include <iostream>
 
-
-int menu(){
+#pragma once
+int menu(character champion){
     int menuNumber=-1;
     std::cout<<"MENU\nChose option from 0 to 5:\n"; 
     while(menuNumber>5||menuNumber<0) //i need to change menunumber to string to exclude option 
@@ -14,7 +14,14 @@ int menu(){
             /* code */
             break;
         case 1:                 
-            /* code */
+            std::cout<<champion.health;
+            std::cout<<"\n";
+            std::cout<<champion.damage;
+            std::cout<<"\n";
+            std::cout<<champion.knowledge;
+            std::cout<<"\n";
+            std::cout<<champion.stamina;
+            std::cout<<"\n";
             break;
         case 2:
             /* code */
