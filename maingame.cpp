@@ -4,6 +4,7 @@
 #include "character.h"
 #include "enemies.h"
 #include "enemyLowMon.h"
+#include "weapons.h"
 
 void fight(enemyLow* enemy)     //combat for low level enemies
 {
@@ -64,6 +65,38 @@ int menu(int health, int damage, int stamina, int knowledge , std::vector<int>de
 
 int main()
 {
+    int addedDmg=0;
+    int addedArmor=0;
+    std::string currentWeapon;
+    std::string currentArmor;
+    //weapons
+    //shortSword
+    weapons shortSword;
+    shortSword.id = 0;
+    shortSword.range = 1;
+    shortSword.damage = 2;
+    shortSword.type = "sword";
+    //longSword
+    weapons longSword;
+    longSword.id = 1;
+    longSword.range = 2;
+    longSword.damage = 3;
+    longSword.type = "sword";
+    //shortBow
+    weapons shortBow;
+    shortBow.id = 2;
+    shortBow.range = 3;
+    shortBow.damage = 3;
+    shortBow.type = "bow";
+    //longBow
+    weapons longBow;
+    longBow.id = 3;
+    longBow.range = 4;
+    longBow.damage = 2;
+    longBow.type = "bow";
+
+    
+
     character champion;
     std::vector<int>weapons;
     for(int i = 0;i<20;i++)weapons[i]=i; //weapons and theirs id
@@ -72,6 +105,8 @@ int main()
         menu(champion.health, champion.damage, champion.stamina, champion.knowledge, defeatedEnemies); //menu in loop, whole gameplay
         champion.health=0; //for now to end the program easly
     }
+    
+    
 
     
 }
