@@ -24,7 +24,6 @@ int menu(int health, int damage, int stamina, int knowledge , std::vector<int>de
         switch (menuNumber)
         {
         case 0:
-            /* code */
             break;
         case 1:                 
             std::cout<<"health: "<<health;
@@ -65,6 +64,7 @@ int menu(int health, int damage, int stamina, int knowledge , std::vector<int>de
 
 int main()
 {
+
     int addedDmg=0;
     int addedArmor=0;
     std::string currentWeapon;
@@ -95,15 +95,19 @@ int main()
     longBow.damage = 2;
     longBow.type = "bow";
 
-    
-
+  
     character champion;
+
     std::vector<int>weapons;
-    for(int i = 0;i<20;i++)weapons[i]=i; //weapons and theirs id
+    for(int i = 0;i<20;i++){
+        weapons.push_back(i); //weapons and theirs id
+    }
     std::vector<int>defeatedEnemies; //storing all defeated enemies
     while(champion.health){
-        menu(champion.health, champion.damage, champion.stamina, champion.knowledge, defeatedEnemies); //menu in loop, whole gameplay
-        champion.health=0; //for now to end the program easly
+        int number;
+        number = menu(champion.health, champion.damage, champion.stamina, champion.knowledge, defeatedEnemies); //menu in loop, whole gameplay
+        if(number==0)return 0;
+        champion.health=5; //for now to end the program easly
     }
     
     
