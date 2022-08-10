@@ -9,7 +9,7 @@ public:
     int knowledge;
     character() //when created give him this stats
     {  
-       std::cin>>name;
+        name = "B";
         health = 5;
         damage = 5;
         stamina = 10;
